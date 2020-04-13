@@ -8,7 +8,7 @@ def get_data_from_sql():
        SELECT calculatedfinishedsquarefeet as home_size, 
         bedroomcnt, bathroomcnt, 
         (taxamount / taxvaluedollarcnt) as tax_rate,
-        yearbuilt, taxvaluedollarcnt as home_value
+        yearbuilt, fips, taxvaluedollarcnt as home_value
         FROM properties_2017 
         JOIN predictions_2017 USING(id)
         WHERE transactiondate >= '2017-05-01' 
